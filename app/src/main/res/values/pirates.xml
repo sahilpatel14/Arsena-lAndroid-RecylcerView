@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pirates">
+        <item>Davy Jones</item>
+        <item>JAck Sparrow</item>
+        <item>Bill Turner</item>
+        <item>Elizabeth Swan</item>
+        <item>Barbosa</item>
+    </string-array>
+
+    <string-array name="ships">
+        <item>Flying Dutchman</item>
+        <item>Black Pearl</item>
+        <item>Flying Dutchman</item>
+        <item>Black Pearl</item>
+        <item>Queen Ann's Revenge</item>
+    </string-array>
+</resources>

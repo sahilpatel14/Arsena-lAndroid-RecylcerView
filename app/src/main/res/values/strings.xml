@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Arsenal-Android-RecylcerView</string>
+    <string name="app_name">Pirates</string>
+    <string name="menu_grid">grid</string>
+    <string name="menu_list">list</string>
 </resources>
