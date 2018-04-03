@@ -58,7 +58,7 @@ class PiratesAdapter(private val items : MutableList<Pair<String, String>>,
     companion object {
 
         fun getRandomColor(): Int =
-            with(Random()) {
+                with(Random()) {
                 return Color.argb(255, nextInt(), nextInt(), nextInt())
             }
         }
