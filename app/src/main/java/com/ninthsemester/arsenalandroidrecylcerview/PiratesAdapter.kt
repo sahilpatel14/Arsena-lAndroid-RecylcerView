@@ -1,5 +1,6 @@
 package com.ninthsemester.arsenalandroidrecylcerview
 
+import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
@@ -15,7 +16,9 @@ import java.util.*
 /**
  * Created by sahil-mac on 02/04/18.
  */
-class PiratesAdapter(private val items : MutableList<Pair<String, String>>,
+class PiratesAdapter(
+        private val context : Context,
+        private val items : MutableList<Pair<String, String>>,
                      private val showAsList : Boolean = true) : RecyclerView.Adapter<PiratesAdapter.PirateViewHolder>(){
 
 
@@ -36,12 +39,29 @@ class PiratesAdapter(private val items : MutableList<Pair<String, String>>,
     override fun getItemCount() : Int = items.size
 
 
+    fun addItem(item : Pair<String, String>) {
+        items.add(2, item)
+        notifyItemInserted(2)
+    }
+
+    fun removeItem(position : Int) {
+        items.removeAt(position)
+        notifyItemRemoved(3)
+    }
+
 
     inner class PirateViewHolder(
             itemView: View,
+            val ivBoat : ImageView = itemView.findViewById(R.id.boatIcon),
             private val imageView : ImageView = itemView.findViewById(R.id.imageView),
             private val tvName: TextView = itemView.findViewById(R.id.tvName),
             private val tvVessel: TextView = itemView.findViewById(R.id.tvVessel)) : RecyclerView.ViewHolder(itemView) {
+
+        init {
+            itemView.setOnClickListener {
+                notifyItemChanged(adapterPosition)
+            }
+        }
 
         fun bind(data : Pair<String, String>) {
 

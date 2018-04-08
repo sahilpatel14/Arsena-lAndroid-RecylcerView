@@ -1,10 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<com.ninthsemester.arsenalandroidrecylcerview.GridRecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/recyclerView"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:listitem="@layout/rv_item_list"
-    tools:context="com.ninthsemester.arsenalandroidrecylcerview.MainActivity" />
+    android:layout_height="match_parent"
+    android:clickable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.ninthsemester.arsenalandroidrecylcerview.GridRecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.ninthsemester.arsenalandroidrecylcerview.MainActivity" />
+
+    <Button
+        android:text="Animate"
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        tools:visibility="visible"
+        android:visibility="gone"
+        android:id="@+id/ic_view"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/ic_directions_boat_white_24dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+</LinearLayout>
+
 
